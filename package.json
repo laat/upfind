@@ -1,0 +1,21 @@
+{
+  "name": "upfind",
+  "version": "1.0.0",
+  "main": "dist/lib/upfind.js",
+  "typings": "dist/lib/upfind.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "mocha test/test.ts --require ts-node/register",
+    "lint": "tslint -c ../../../tslint.json lib/*",
+    "clean": "rm -rf dist node_modules typings test/typings",
+    "install": "tsd install && cd test && tsd install"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "ts-node": "^0.5.5",
+    "tslint": "^3.2.1",
+    "typescript": "^1.7.5"
+  }
+}
